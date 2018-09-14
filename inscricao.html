@@ -14,6 +14,8 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/compiled-4.5.10.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -82,27 +84,117 @@
         <!-- Main Container -->
         <div class="container">
 
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
-            <h1>Role a página \/</h1>
-            <br>
+            <h2>Formulário de Inscrição</h2>
+            <hr>
+            <form method="post">
+                <!-- Dados Pessoais -->
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h4>Dados Pessoais</h4>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="nome" class="form-control">
+                            <label for="nome">Nome Completo *</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="email" id="email" class="form-control">
+                            <label for="email">Email *</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="tel" id="telefone" class="form-control">
+                            <label for="telefone">Telefone</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="cpf" class="form-control">
+                            <label for="cpf">CPF</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Aluno, Professor ou Profissional na área? -->
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Eu sou um...</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 option-center mt-4 mb-4">
 
-            <h1>Role a página \/</h1>
-            <br>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="euSou" id="aluno" value="aluno">
+                            <label class="form-check-label eu-sou" for="aluno">
+                                Aluno
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-6">
+                                <div class="md-form">
+                                    <input type="text" id="ra" class="form-control">
+                                    <label for="ra">R.A. (Registro Acadêmico)</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-6">
+                                <div class="md-form">
+                                    <input type="text" id="curso" class="form-control">
+                                    <label for="curso">Curso</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 option-center mt-4 mb-4">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="euSou" id="professor" value="professor">
+                            <label class="form-check-label eu-sou" for="professor">
+                                Professor
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="md-form">
+                                    <input type="text" id="instituicao" class="form-control">
+                                    <label for="instituicao">Instituição</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 option-center mt-4 mb-4">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="euSou" id="profissional" value="profissional">
+                            <label class="form-check-label eu-sou" for="profissional">
+                                Profissional na área
+                            </label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="md-form">
+                                    <input type="text" id="empresa" class="form-control">
+                                    <label for="empresa">Empresa</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="btn-center mb-5">
+                    <button type="submit" class="btn btn-primary align-center">Enviar</button>
+                </div>
+            </form>
+        </div>
+        </form>
 
 
         </div>
@@ -174,8 +266,7 @@
         <!-- Footer Links -->
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+        <div class="footer-copyright text-center py-3">© 2018 Copyright
         </div>
         <!-- Copyright -->
     </footer>

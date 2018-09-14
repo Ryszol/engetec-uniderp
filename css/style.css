@@ -29,8 +29,14 @@
     }    
 }
 
-.fix-scroll-bottom{
-    bottom: 0;
-    right: 0;
-    left: 0;
+main{
+    min-height: 600px;
+}
+
+.eu-sou{
+    font-size: 1.5rem;
+}
+
+.btn-center{
+    text-align: center;
 }

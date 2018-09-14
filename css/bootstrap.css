@@ -3608,7 +3608,7 @@ input[type="button"].btn-block {
   border-radius: 0.25rem;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  /* appearance: none;*/
 }
 
 .custom-select:focus {
@@ -3723,7 +3723,7 @@ input[type="button"].btn-block {
   background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  /* appearance: none; */
 }
 
 .custom-range:focus {
@@ -3755,7 +3755,7 @@ input[type="button"].btn-block {
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -webkit-appearance: none;
-  appearance: none;
+ /* appearance: none;*/
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -3786,7 +3786,7 @@ input[type="button"].btn-block {
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
-  appearance: none;
+  /* appearance: none; */
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -3819,7 +3819,7 @@ input[type="button"].btn-block {
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  appearance: none;
+  /* appearance: none;*/
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -5529,7 +5529,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   white-space: normal;
-  line-break: auto;
+   /* line-break: auto; */
   font-size: 0.875rem;
   word-wrap: break-word;
   opacity: 0;
@@ -5642,7 +5642,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   white-space: normal;
-  line-break: auto;
+  /* line-break: auto; */
   font-size: 0.875rem;
   word-wrap: break-word;
   background-color: #fff;
