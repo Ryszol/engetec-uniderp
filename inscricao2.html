@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ENGETEC-UNIDERP - Semana da Engenharia e Tecnologia da Uniderp </title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/compiled-4.5.10.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Navegation -->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar primary-color responsive">
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">
+                    <strong>ENGETEC-UNIDERP</strong>
+                </a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapse button -->
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="inscricao.html">Inscreva-se
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cronograma</a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Ação</a>
+                                <a class="dropdown-item" href="#">Outra ação</a>
+                                <a class="dropdown-item" href="#">Outra coisa aqui</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                </div>
+                <!-- Collapsible content -->
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+    <!-- Main Navegation -->
+    <!-- Main Layout -->
+    <main class="mt-6">
+        <!-- Main Container -->
+        <div class="container">
+            <h2>Formulário de Inscrição</h2>
+            <hr>
+            <form action="mail.php" method="post">
+                <!-- Dados Pessoais -->
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h4>Dados Pessoais</h4>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="nome" class="form-control" name="nome" required>
+                            <label for="nome">Nome Completo *</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="email" id="email" class="form-control" required>
+                            <label for="email">Email *</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="tel" id="telefone" class="form-control">
+                            <label for="telefone">Telefone</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="cpf" class="form-control">
+                            <label for="cpf">CPF</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Aluno, Professor ou Profissional na área? -->
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Eu sou um...</h4>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input class="form-check-input" type="radio" name="euSou" value="Aluno" id="aluno" onclick="mAluno(this)">
+                            <label class="form-check-label" for="aluno">
+                                Aluno
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input class="form-check-input" type="radio" name="euSou" value="Professor" id="professor" onclick="mProfessor(this)">
+                            <label class="form-check-label" for="professor">
+                                Professor
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input class="form-check-input" type="radio" name="euSou" value="Profissional" id="profissional" onclick="mProfissional(this)">
+                            <label class="form-check-label" for="profissional">
+                                Profissional na área
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo: Aluno -->
+                <div class="row" id="cAluno">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="curso" name="curso" class="form-control">
+                            <label for="curso">Curso</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="number" id="ra" name="ra" class="form-control">
+                            <label for="ra">R.A. (Registro Acadêmico)</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="md-form">
+                            <input class="form-check-input" type="checkbox" name="oficina" id="oficina" onclick="mOficina(this)">
+                            <label class="form-check-label" for="oficina">
+                                Desejo participar das oficinas
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row" id="oficinas">
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="curriculumVitae" id="curriculumVitae">
+                                <label class="form-check-label" for="curriculumVitae">
+                                    Oficina 1: E o seu Curriculum Vitae?
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="roboticaAcao" id="roboticaAcao">
+                                <label class="form-check-label" for="roboticaAcao">
+                                    Oficina 2: Robótica em Ação
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="tecnicasOrganizacao" id="tecnicasOrganizacao">
+                                <label class="form-check-label" for="tecnicasOrganizacao">
+                                    Oficina 3: Técnicas de organização, memorização e estudos auxiliada por aplicativos e softwares
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="iniciacaoCientifica" id="iniciacaoCientifica">
+                                <label class="form-check-label" for="iniciacaoCientifica">
+                                    Oficina 4: Iniciação científica: o primeiro passo para integrar no mundo da pesquisa
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="determinacaoPolaridade" id="determinacaoPolaridade">
+                                <label class="form-check-label" for="determinacaoPolaridade">
+                                    Oficina 5: Determinação da polaridade dos diversos enrolamentos existentes no mesmo circuito magnético
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="confeccaoPlacas" id="confeccaoPlacas">
+                                <label class="form-check-label" for="confeccaoPlacas">
+                                    Oficina 6: Confecção de placas de circuito impresso
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="segurancaInformacao" id="segurancaInformacao">
+                                <label class="form-check-label" for="segurancaInformacao">
+                                    Oficina 7: Oficina de Segurança da informação - Quebras de senha, da teoria à prática
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="p-1">
+                                <input class="form-check-input" type="checkbox" name="quickGames" id="quickGames">
+                                <label class="form-check-label" for="quickGames">
+                                    Oficina 8: Quick Games in Java
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-6">
+                        <div class="md-form">
+                            <input class="form-check-input" type="checkbox" name="visita" id="visita">
+                            <label class="form-check-label" for="visita">
+                                Desejo participar da visita
+                            </label>
+                            <br>
+                            <p>mais informações aqui</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo: Professor -->
+                <div class="row" id="cProfessor">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="instituicao" class="form-control">
+                            <label for="instituicao">Instituição</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campo: Profissional da Área -->
+                <div class="row" id="cProfissional">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="empresa" class="form-control">
+                            <label for="empresa">Empresa</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENVIAR -->
+                <div class="btn-center mb-5">
+                    <button type="submit" class="btn btn-primary align-center">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- Rodapé -->
+    <footer class="page-footer font-small primary-color pt-4">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+                    <!-- Content -->
+                    <h5 class="text-uppercase">Footer Content</h5>
+                    <p>Here you can use rows and columns here to organize your footer content.</p>
+                </div>
+                <!-- Grid column -->
+                <hr class="clearfix w-100 d-md-none pb-3">
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!">Link 2</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- SCRIPTS -->
+    <script>
+        //OCULTA TUDO POR PADRÃO ATÉ QUE O USUÁRIO MARQUE ALGO
+        window.onload = function() {
+            $('#cAluno').hide();
+            $('#cProfessor').hide();
+            $('#cProfissional').hide();
+            $('#oficinas').hide();
+
+        };
+
+        //SE MARCA ALUNO ENTÃO DESMARCA O RESTANTE
+        function mAluno(objCheck) {
+            if (objCheck.checked) {
+                $('#cAluno').show();
+                $('#cProfessor').hide();
+                $('#cProfissional').hide();
+            } else { //o else é apenas pra verificar mesmo
+                $('#cAluno').hide();
+                $('#cProfessor').show();
+                $('#cProfissional').show();
+            }
+        };
+
+        //SE MARCA PROFESSOR ENTÃO DESMARCA O RESTANTE
+        function mProfessor(objCheck) {
+            if (objCheck.checked) {
+                $('#cProfessor').show();
+                $('#cAluno').hide();
+                $('#cProfissional').hide();
+            } else {
+                $('#cProfessor').hide();
+                $('#cAluno').show();
+                $('#cProfissional').show();
+            }
+        };
+
+        //SE MARCA PROFISSIONAL ENTÃO DESMARCA O RESTANTE
+        function mProfissional(objCheck) {
+            if (objCheck.checked) {
+                $('#cProfissional').show();
+                $('#cAluno').hide();
+                $('#cProfessor').hide();
+            } else {
+                $('#cProfissional').hide();
+                $('#cAluno').show();
+                $('#cProfessor').show();
+            }
+        };
+        //SE MARCA PROFISSIONAL ENTÃO DESMARCA O RESTANTE
+        function mOficina(objCheck) {
+            if (objCheck.checked) {
+                $('#oficinas').show();
+            } else {
+                $('#oficinas').hide();
+            }
+        };
+
+    </script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

@@ -17,7 +17,7 @@
         -webkit-transition: 1s ease-in-out, padding 1s ease-in-out;
         -o-transition: 1s ease-in-out, padding 1s ease-in-out;
         transition: 1s ease-in-out, padding 1s ease-in-out;
-    }   
+    }
 }
 
 @media (min-width: 600px){
@@ -26,7 +26,7 @@
         -webkit-transition: 1s ease-in-out, padding 1s ease-in-out;
         -o-transition: 1s ease-in-out, padding 1s ease-in-out;
         transition: 1s ease-in-out, padding 1s ease-in-out;
-    }    
+    }
 }
 
 main{
@@ -39,4 +39,32 @@ main{
 
 .btn-center{
     text-align: center;
+}
+
+table.cronograma{
+    margin-bottom: 40px;
+}
+
+table.cronograma tr td{
+    text-align: center;
+    padding: 15px 30px;
+    font-size: 12pt;
+}
+
+table.oficinas{
+    margin-bottom: 50px;
+    display: table;
+}
+
+table.oficinas tr.topo-tabela{
+    background: rgba(42, 42, 42, 0.2);
+
+}
+
+table.oficinas tr.par{
+    background: rgba(0, 0, 0, .05);
+}
+table.oficinas tr td{
+    padding: 12px;
+    font-size: 12pt;
 }
