@@ -103,3 +103,6 @@ table.oficinas tr td{
 #cAluno, #cProfessor, #cProfissional, #soParaAlunos{
     display: none;
 }
+footer{
+    margin-top: 1%;
+}
