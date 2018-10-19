@@ -7227,15 +7227,15 @@ body.scrollable {
       margin-left: 2.5rem; }
     .md-form .prefix ~ .form-text {
       margin-left: 2.6rem; }
-  .md-form label {
-    position: absolute;
-    top: 0.65rem;
-    left: 0;
-    -webkit-transition: 0.2s ease-out;
-    -o-transition: 0.2s ease-out;
-    transition: 0.2s ease-out;
-    cursor: text;
-    color: #757575; }
+    .md-form label {
+      position: absolute;
+      top: 0.65rem;
+      left: 0;
+      -webkit-transition: 0.2s ease-out;
+      -o-transition: 0.2s ease-out;
+      transition: 0.2s ease-out;
+      cursor: text;
+      color: #757575; }
     .md-form label.active {
       -webkit-transform: translateY(-140%);
       -ms-transform: translateY(-140%);
