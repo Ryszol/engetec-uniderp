@@ -15,7 +15,6 @@
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/compiled-4.5.10.min.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -288,8 +287,9 @@
                 -->
                 <!-- ENVIAR -->
                 <div class="btn-center mb-5">
-                    <button type="reset" class="btn btn-outline-blue-grey waves-effect align-center">Resetar</button>
+                    <button type="reset" id="resetar" class="btn btn-outline-blue-grey waves-effect align-center">Resetar</button>
                     <button type="submit" class="btn btn-primary waves-effect align-center">Finalizar Inscrição</button>
+                    <button type="reset" id="resetar2" class="btn btn-outline-blue-grey waves-effect align-center">Resetar</button>
                 </div>
             </form>
         
@@ -300,67 +300,8 @@
     <!-- Main Layout -->
 
     <!-- Footer -->
-    <footer class="page-footer font-small primary-color pt-4">
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left">
-
-            <!-- Grid row -->
-            <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-
-                    <!-- Content -->
-                    <h5 class="text-uppercase">Footer Content</h5>
-                    <p>Here you can use rows and columns here to organize your footer content.</p>
-
-                </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-uppercase">Links</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- Grid column -->
-
-            </div>
-            <!-- Grid row -->
-
-        </div>
-        <!-- Footer Links -->
-
+    <footer class="page-footer font-small primary-color">
+        
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2018 Copyright
         </div>
@@ -372,67 +313,7 @@
 
     <!-- SCRIPTS -->
     <script>
-        //OCULTA TUDO POR PADRÃO ATÉ QUE O USUÁRIO MARQUE ALGO
-        window.onload = function() {
-            $('#cAluno').hide();
-            $('#cProfessor').hide();
-            $('#cProfissional').hide();
-            $('#oficinas').hide();
 
-        };
-
-        //SE MARCA ALUNO ENTÃO DESMARCA O RESTANTE
-        function mAluno(objCheck) {
-            if (objCheck.checked) {
-                $('#cAluno').show();
-                $('#cProfessor').hide();
-                $('#cProfissional').hide();
-                $('#soParaAlunos').show();
-            } else { //o else é apenas pra verificar mesmo
-                $('#cAluno').hide();
-                $('#cProfessor').show();
-                $('#cProfissional').show();
-                $('#soParaAlunos').hide();
-            }
-        };
-
-        //SE MARCA PROFESSOR ENTÃO DESMARCA O RESTANTE
-        function mProfessor(objCheck) {
-            if (objCheck.checked) {
-                $('#cProfessor').show();
-                $('#cAluno').hide();
-                $('#cProfissional').hide();
-                $('#soParaAlunos').hide();
-            } else {
-                $('#cProfessor').hide();
-                $('#cAluno').show();
-                $('#cProfissional').show();
-                $('#soParaAlunos').show();
-            }
-        };
-
-        //SE MARCA PROFISSIONAL ENTÃO DESMARCA O RESTANTE
-        function mProfissional(objCheck) {
-            if (objCheck.checked) {
-                $('#cProfissional').show();
-                $('#cAluno').hide();
-                $('#cProfessor').hide();
-                $('#soParaAlunos').hide();
-            } else {
-                $('#cProfissional').hide();
-                $('#cAluno').show();
-                $('#cProfessor').show();
-                $('#soParaAlunos').show();
-            }
-        };
-        //SE MARCA PROFISSIONAL ENTÃO DESMARCA O RESTANTE
-        function mOficina(objCheck) {
-            if (objCheck.checked) {
-                $('#oficinas').show();
-            } else {
-                $('#oficinas').hide();
-            }
-        };
     </script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -444,6 +325,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/scripts.js"></script>
     <script>
     //MASCARAS DO FORMULARIO
         $(function() {

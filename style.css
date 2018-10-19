@@ -1,0 +1,105 @@
+
+@media (max-width: 991.98px){
+    .mt-6{
+        margin-top: 5.8rem !important;
+    }
+}
+
+@media (min-width: 992px){
+    .mt-6{
+        margin-top: 5.8rem !important;
+    }
+}
+
+@media (max-width: 599.98px){
+    .mt-6{
+        margin-top: 4.5rem !important;
+        -webkit-transition: 1s ease-in-out, padding 1s ease-in-out;
+        -o-transition: 1s ease-in-out, padding 1s ease-in-out;
+        transition: 1s ease-in-out, padding 1s ease-in-out;
+    }
+}
+
+@media (min-width: 600px){
+    .mt-6{
+        margin-top: 5.8rem !important;
+        -webkit-transition: 1s ease-in-out, padding 1s ease-in-out;
+        -o-transition: 1s ease-in-out, padding 1s ease-in-out;
+        transition: 1s ease-in-out, padding 1s ease-in-out;
+    }
+}
+
+@media (max-width: 384.98px){
+    #resetar{
+        display: none;
+    }
+    #resetar2{
+        display: auto;
+    }
+}
+@media (min-width: 385px){
+    #resetar{
+        display: auto;
+    }
+    #resetar2{
+        display: none;
+    }
+}
+
+main{
+    min-height: 600px;
+}
+
+.eu-sou{
+    font-size: 1.5rem;
+}
+
+.btn-center{
+    text-align: center;
+}
+
+table.cronograma{
+    margin-bottom: 40px;
+}
+
+table.cronograma tr.blue1 {
+    background: #4285f4;
+    color: #fff;
+}
+table.cronograma tr td.blue2 {
+    background: #4a92fd;
+    color: #fff;
+}
+table.cronograma tr td.green2{
+    background: rgb(137, 238, 137);
+}
+
+table.cronograma tr td{
+    text-align: center;
+    padding: 15px 30px;
+    font-size: 13pt;
+    border: 1px solid #fff;
+}
+
+table.oficinas{
+    margin-bottom: 50px;
+}
+
+table.oficinas tr.topo-tabela{
+    background: rgba(42, 42, 42, 0.2);
+
+}
+
+table.oficinas tr.par{
+    background: rgba(0, 0, 0, .05);
+}
+table.oficinas tr td{
+    padding: 12px;
+    font-size: 13pt;
+}
+#oficinas{
+    padding-left: 30px;
+}
+#cAluno, #cProfessor, #cProfissional, #soParaAlunos{
+    display: none;
+}
