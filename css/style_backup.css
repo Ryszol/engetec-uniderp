@@ -106,35 +106,3 @@ table.oficinas tr td{
 footer{
     margin-top: 1%;
 }
-/*
-.pagination .page-item.active .page-link{
-    background-color:#4285f4;
-}*/
-span.h2{
-    font-size: 22pt;
-    font-weight: 300;
-    padding: 0 10px;
-    display: block;
-}
-p#capa{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 20pt;
-}
-p#capa ul li{
-    font-size: 14pt;
-    margin: 0;
-    padding: 0;
-}
-
-p.text{
-    font-size: 14pt;
-    margin-top: 5px;
-    padding: 15px;
-    text-align: justify;
-}
-p.lista{
-    font-size: 14pt;
-    padding: 0 15px;
-    text-align: justify;
-}

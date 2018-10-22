@@ -46,6 +46,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="relacao-inscritos.html">Relação de Inscritos
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Cronograma</a>
                         </li>
                         <!-- Dropdown -->
@@ -112,7 +117,7 @@
                         <h4>Eu sou um...</h4>
                     </div>
                 </div>
-
+                
                 <div class="row mb-4">
                     <div class="col-lg-3 col-md-6">
                         <div class="md-form">
@@ -139,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Campo: Aluno -->
                 <div class="row" id="cAluno">
                     <div class="col-lg-3 col-md-6">
@@ -162,7 +167,7 @@
                             </label>
                         </div>
                     </div>
-
+                    
                     <div class="row" id="oficinas">
                         <div class="col-lg-12">
                             <div class="p-1">
@@ -229,7 +234,7 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="col-lg-12 col-md-6">
                         <div class="md-form">
                             <input class="form-check-input" type="checkbox" name="visita" id="visita">
@@ -241,7 +246,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Campo: Professor -->
                 <div class="row" id="cProfessor">
                     <div class="col-lg-12 col-md-6">
@@ -251,7 +256,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Campo: Profissional da Área -->
                 <div class="row" id="cProfissional">
                     <div class="col-lg-12 col-md-6">
@@ -261,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- ENVIAR -->
                 <div class="btn-center mb-5">
                     <button type="submit" class="btn btn-primary align-center">Enviar</button>
@@ -329,9 +334,9 @@
             $('#cProfessor').hide();
             $('#cProfissional').hide();
             $('#oficinas').hide();
-
+            
         };
-
+        
         //SE MARCA ALUNO ENTÃO DESMARCA O RESTANTE
         function mAluno(objCheck) {
             if (objCheck.checked) {
@@ -344,7 +349,7 @@
                 $('#cProfissional').show();
             }
         };
-
+        
         //SE MARCA PROFESSOR ENTÃO DESMARCA O RESTANTE
         function mProfessor(objCheck) {
             if (objCheck.checked) {
@@ -357,7 +362,7 @@
                 $('#cProfissional').show();
             }
         };
-
+        
         //SE MARCA PROFISSIONAL ENTÃO DESMARCA O RESTANTE
         function mProfissional(objCheck) {
             if (objCheck.checked) {
@@ -378,7 +383,7 @@
                 $('#oficinas').hide();
             }
         };
-
+        
     </script>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ENGETEC-UNIDERP - Semana da Engenharia e Tecnologia da Uniderp</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/compiled-4.5.10.min.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.ico">
+</head>
+
+<body>
+    
+    <div id="linksPerfilUsuario">
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalRecuperaSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="formRecuperaSenha" name="formRecuperaSenha" onsubmit="recuperarSenha(event, this)" class="text-center border border-light p-5">
+                        <p class="h4 mb-4">Informe seu e-mail: </p>
+                        <input type="email" id="recuperaSenha" name="recuperaSenha" class="form-control mb-4" placeholder="E-mail" required>
+                        
+                        <button class="btn btn-primary btn-block my-4" type="submit">RECUPERAR</button>
+                        <div id="spinner-recuperar-senha" align="center"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="modalAlteraSenha" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="formAlteraSenha" name="formAlteraSenha" onsubmit="alterarSenha(event, this)" class="text-center border border-light p-5">
+                        <p class="h4 mb-4">Informe a nova senha: </p>
+                        <input type="password" id="alteraSenha" name="alteraSenha" class="form-control mb-4" placeholder="Nova senha" required>
+                        <input type="password" id="alteraSenhaConfirma" name="alteraSenhaConfirma" class="form-control mb-4" placeholder="Confirme a nova senha" required>
+                        
+                        <button class="btn btn-primary btn-block my-4" type="submit">ALTERAR</button>
+                        <div id="spinner-alterar-senha" align="center"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogaUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="formLogin" name="formLogin" onsubmit="logaUsuario(event, this)" class="text-center border border-light p-5">
+                        <p class="h4 mb-4">Entrar</p>
+                        <input type="email" id="email" name="email" class="form-control mb-4" placeholder="E-mail" required>
+                        <input type="password" id="senha" name="senha" class="form-control mb-4" placeholder="Password" required>
+                        <div class="d-flex justify-content-around">
+                            <div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                                    <label class="custom-control-label" for="defaultLoginFormRemember">Lembrar - me</label>
+                                </div>
+                            </div>
+                            <div>
+                                <a onclick="fechaModalLogin()" data-toggle="modal" data-target="#modalRecuperaSenha" href="">Esqueceu sua senha?</a>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-block my-4" type="submit">ENTRAR</button>
+                        <div id="spinner-login" align="center"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Navegation -->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar primary-color responsive">
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">
+                    <strong>ENGETEC-UNIDERP</strong>
+                </a>
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapse button -->
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="inscricao.html">Inscreva-se</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="relacao-inscritos.html">Relação de Inscritos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cronograma.html">Cronograma</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="visita.html">Visita
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oficinas</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="o-seu-curriculum.html">1. E o seu curriculum Vitae?</a>
+                                <a class="dropdown-item" href="robotica-em-acao.html">2. Robótica em ação</a>
+                                <a class="dropdown-item" href="tecnicas-de-organizacao.html">3. Técnicas de organização, memorização e estudos...</a>
+                                <a class="dropdown-item" href="iniciacao-cientifica.html">4. Iniciação científica: o primeiro passo
+                                    para o integrar...</a>
+                                    <a class="dropdown-item" href="determinacao-de-polaridade.html">5. Determinação da Polaridade dos diversos enrolamentos...</a>
+                                    <a class="dropdown-item" href="confeccao-de-placas.html">6. Confecção de placas de circuito impresso</a>
+                                    <a class="dropdown-item" href="seguranca-da-informacao.html">7. Oficina de Segurança da informação</a>
+                                    <a class="dropdown-item" href="quick-games.html">8. Quick Games in Java</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- Links -->
+                        <div id="areaLogin"> 
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#modalLogaUsuario">Area Restrita</button>
+                        </div>
+                    </div>
+                    <!-- Collapsible content -->
+                </div>
+            </nav>
+            <!--/.Navbar-->
+        </header>
+        <!-- Main Navegation -->
+        <!-- Main Layout -->
+        <main class="mt-6 mb-5">
+            <!-- Main Container -->
+            <div class="container">
+                <article class="pb-5">
+                    <h2>
+                        <strong>Visita Técnica</strong>
+                        <small class="text-muted">ADM do Brasil.</small>
+                    </h2>
+                    <hr>
+                    <h4>Um responsável técnico pela empresa apresentará alguns processos que são desenvolvido na empresa.</h4><br>
+                    <h4><span class="blue-text pb-2">Endereço:</span> Av  Principal 01, 100 - Núcleo Industrial  - Campo Grande.</h4>
+                    <div class="alert alert-warning" role="alert">
+                        <i class="fa fa-warning" aria-hidden="true"></i> <strong>Atenção:</strong>
+                        <p>
+                            <strong>Não será</strong> disponibilizado <strong>translado</strong> 
+                            até a <strong>ADM do Brasil.</strong>
+                        </p>
+                    </div>
+                    <h4><span class="blue-text pb-2">Data/Hora:</span> Quarta-feira (24/10/2018) às <strong>13:00h</strong></h4>
+
+                    <h4><span class="blue-text pb-2">Vagas:</span> Há somente <strong>20 vagas</strong>. Essas serão distribuídas na segunda - feira, <strong>após a palestra de abertura da semana.</strong></h4>
+                    <br>
+                    <h5>Mais informações sobre a Empresa no link <a href="https://www.adm.com/adm-worldwide/brazil-pr">https://www.adm.com/adm-worldwide/brazil-pr</a></h4>
+
+                </article>
+            </div>
+        </div>
+        <!-- Main Container -->
+    </main>
+    <!-- Main Layout -->
+    <!-- Footer -->
+    <footer class="page-footer prendeBottom fix-scroll-bottom font-small primary-color">
+        
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Config -->
+    <script type="text/javascript" src="js/config/config.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/controllers/login.js"></script>
+</body>
+
+</html>

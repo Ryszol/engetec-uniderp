@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ENGETEC-UNIDERP - Semana da Engenharia e Tecnologia da Uniderp </title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/compiled-4.5.10.min.css" rel="stylesheet">
+    <link rel="icon" href="img/logo.ico">
+</head>
+
+<body>
+
+    <!-- Main Navegation -->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar primary-color responsive">
+            <div class="container">
+                <!-- Navbar brand -->
+                <a class="navbar-brand" href="#">
+                    <strong>ENGETEC-UNIDERP</strong>
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Collapse button -->
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="">Inscreva-se
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="relacao-inscritos.html">Relação de Inscritos
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="cronograma.html">Cronograma</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oficinas</a>
+                            <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="o-seu-curriculum.html">1. E o seu curriculum Vitae?</a>
+                                <a class="dropdown-item" href="robotica-em-acao.html">2. Robótica em ação</a>
+                                <a class="dropdown-item" href="tecnicas-de-organizacao.html">3. Técnicas de organização, memorização e estudos...</a>
+                                <a class="dropdown-item" href="iniciacao-cientifica.html">4. Iniciação científica: o primeiro passo
+                                    para o integrar...</a>
+                                <a class="dropdown-item" href="determinacao-de-polaridade.html">5. Determinação da Polaridade dos diversos enrolamentos...</a>
+                                <a class="dropdown-item" href="confeccao-de-placas.html">6. Confecção de placas de circuito impresso</a>
+                                <a class="dropdown-item" href="seguranca-da-informacao.html">7. Oficina de Segurança da informação</a>
+                                <a class="dropdown-item" href="quick-games.html">8. Quick Games in Java</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <!-- Links -->
+
+
+                </div>
+                <!-- Collapsible content -->
+            </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+    <!-- Main Navegation -->
+
+    <!-- Main Layout -->
+    <main class="mt-6">
+
+        <!-- Main Container -->
+        <div class="container">
+
+            <h2>Formulário de Inscrição</h2>
+            <hr>
+            <div class="alert alert-warning" role="alert">
+                <i class="fa fa-warning" aria-hidden="true"></i> <strong>Atenção:</strong> <p>Preencha o formulário de inscrição <strong>corretamente</strong>, os dados serão utilizados na emissão do seu certificado. Só é permitido o envio de <strong>uma inscrição</strong>.</p>
+            </div>
+            
+            <form id="formInscricao" name="formInscricao" onsubmit="salvaInscricao(event, this)" method="post">
+                <!-- Dados Pessoais -->
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h4>Dados Pessoais</h4>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="nome" class="nome form-control" required name="nome" pattern="[A-Z,a-z, ,.,ã,á,à,â,ê,í,ú,õ,é,ü,-]+$" title="Por favor use apenas letras. Não utilize símbolos ou números.">
+                            <label for="nome">Nome Completo *</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="email" id="email" class="form-control" required name="email">
+                            <label for="email">Email *</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="tel" id="telefone" class="telefone form-control" name="telefone"  pattern=".{15,}" title="Informe o DDD e os 8 ou 9 números do seu telefone.">
+                            <label for="telefone">Telefone</label>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="md-form">
+                            <input type="text" id="cpf" class="cpf form-control" name="cpf"  required pattern=".{14,}" title="O CPF contém 11 números.">
+                            <label for="cpf">CPF</label>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Aluno, Professor ou Profissional na área? -->
+                <div class="row">
+                    <div class="col-12">
+                        <h4>Eu sou um...</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 option-center mt-4 mb-4">
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="euSou" id="aluno" value="Aluno" onclick="mAluno(this)">
+                            <label class="form-check-label eu-sou" for="aluno">
+                                Aluno
+                            </label>
+                        </div>
+                        <div class="row" id="cAluno">
+                            <div class="col-lg-12 col-md-6">
+                                <div class="md-form">
+                                    <input type="text" id="ra" class="ra form-control" name="ra" pattern=".{12,}" title="O RA contém 12 números.">
+                                    <label for="ra">R.A. (Registro Acadêmico)</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-6">
+                                <div class="md-form">
+                                    <input type="text" id="curso" class="form-control" name="curso" pattern="[A-Z,a-z, ,.,ã,á,à,â,ê,í,ú,õ,é,ü,-]+$" title="Por favor use apenas letras. Não utilize símbolos ou números.">
+                                    <label for="curso">Curso</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 option-center mt-4 mb-4">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="euSou" id="professor" value="Professor" onclick="mProfessor(this)">
+                            <label class="form-check-label eu-sou" for="professor">
+                                Professor
+                            </label>
+                        </div>
+                        <div class="row" id="cProfessor">
+                            <div class="col-12">
+                                <div class="md-form">
+                                    <input type="text" id="instituicao" name="instituicao" class="form-control">
+                                    <label for="instituicao">Instituição</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 option-center mt-4 mb-4">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="radio" name="euSou" id="profissional" value="Profissional" onclick="mProfissional(this)">
+                            <label class="form-check-label eu-sou" for="profissional">
+                                Profissional na área
+                            </label>
+                        </div>
+                        <div class="row" id="cProfissional">
+                            <div class="col-12">
+                                <div class="md-form">
+                                    <input type="text" id="empresa" name="empresa" class="form-control">
+                                    <label for="empresa">Empresa</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="row" id="soParaAlunos">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="md-form">
+                            <input class="form-check-input" type="checkbox" id="oficina" onclick="mOficina(this)" name="oficina">
+                            <label class="form-check-label" for="oficina">
+                                Desejo participar de uma oficina
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row" id="oficinas">
+                        <!-- <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="Curriculum" id="curriculumVitae" name="oficinaOption">
+                            <label class="form-check-label" for="curriculumVitae">
+                                Oficina 1: E o seu Curriculum Vitae?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="Robotica" id="roboticaAcao" name="oficinaOption">
+                            <label class="form-check-label" for="roboticaAcao">
+                                Oficina 2: Robótica em Ação
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="Tecnicas" id="tecnicasOrganizacao" name="oficinaOption">
+                            <label class="form-check-label" for="tecnicasOrganizacao">
+                                Oficina 3: Técnicas de organização, memorização e estudos auxiliada por aplicativos e softwares
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="Iniciacao" id="iniciacaoCientifica" name="oficinaOption">
+                            <label class="form-check-label" for="iniciacaoCientifica">
+                                Oficina 4: Iniciação científica: o primeiro passo para integrar no mundo da pesquisa
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="14" id="determinacaoPolaridade" name="oficinaOption">
+                            <label class="form-check-label" for="determinacaoPolaridade">
+                                Oficina 5: Determinação da polaridade dos diversos enrolamentos existentes no mesmo circuito magnético
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="Confeccao" id="confeccaoPlacas" name="oficinaOption">
+                            <label class="form-check-label" for="confeccaoPlacas">
+                                Oficina 6: Confecção de placas de circuito impresso
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="Seguranca" id="segurancaInformacao" name="oficinaOption">
+                            <label class="form-check-label" for="segurancaInformacao">
+                                Oficina 7: Oficina de Segurança da informação - Quebras de senha, da teoria à prática
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="p-1">
+                            <input class="form-check-input" type="radio" value="QuickGames" id="quickGames" name="oficinaOption">
+                            <label class="form-check-label" for="quickGames">
+                                Oficina 8: Quick Games in Java
+                            </label>
+                        </div>
+                    </div> -->
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                        <div class="md-form">
+                            <input class="form-check-input" type="checkbox" id="visita" name="visita">
+                            <label class="form-check-label" for="visita">
+                                Desejo participar da visita
+                            </label>
+                            <!-- <br><p>Seria interessante um link pra mais informações sobre isso.</p> -->
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+                <!--
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="radio" name="euSou" id="aluno" value="aluno">
+                    <label class="form-check-label eu-sou" for="aluno">
+                        Aluno
+                    </label>
+                </div>
+            -->
+                <!-- ENVIAR -->
+                <div id="spinner" align="center"></div>
+                
+                <div class="btn-center mb-5">
+                    <button type="reset" id="resetar" class="btn btn-outline-blue-grey waves-effect align-center">Resetar</button>
+                    <button type="submit" class="btn btn-primary waves-effect align-center">Finalizar Inscrição</button>
+                    <button type="reset" id="resetar2" class="btn btn-outline-blue-grey waves-effect align-center">Resetar</button>
+                </div>
+            </form>
+
+        </div>
+        <!-- Main Container -->
+
+    </main>
+    <!-- Main Layout -->
+
+    <!-- Footer -->
+    <footer class="page-footer font-small primary-color">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- Footer -->
+
+
+    <!-- SCRIPTS -->
+    <script>
+
+    </script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <!-- Controller -->
+    <script type="text/javascript" src="./js/controllers/inscricao.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        //MASCARAS DO FORMULARIO
+        $(function() {
+            $('.telefone').mask('(00) 0 0000-0000');
+            $('.cpf').mask('000.000.000-00', {
+                reverse: true
+            });
+            $('.ra').mask('000000000000');
+
+            buscaOficinasFormulario();
+        });
+
+    </script>
+</body>
+
+</html>
